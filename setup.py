@@ -13,6 +13,7 @@ setup(
             "parser-run = mailparser_app:main"
         ]
     },
+    url="https://github.com/Ziothh/rosseel-mailparser",
     install_requires=[
         "beautifulsoup4",
         "lxml",
