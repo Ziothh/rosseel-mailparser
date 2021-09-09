@@ -1,0 +1,103 @@
+{
+    "version": 1,
+    "formatters": {
+        "default": {
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+            "datefmt": "%d-%m-%Y %H:%M:%S"
+        },
+        "parsedEmailData": {
+            "format": "%(asctime)s\n%(message)s",
+            "datefmt": "%d-%m-%Y %H:%M:%S"
+        }
+    },
+    "handlers": {
+        "debugConsole": {
+            "class": "logging.StreamHandler",
+            "formatter": "default",
+            "level": "DEBUG",
+            "stream": "ext://sys.stdout"
+        },
+        "consoleParsedData": {
+            "class": "logging.StreamHandler",
+            "formatter": "parsedEmailData",
+            "level": "DEBUG",
+            "stream": "ext://sys.stdout"
+        },
+        "errorFile": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "default",
+            "level": "ERROR",
+            "filename": "./logs/errors.log",
+            "mode": "a",
+            "encoding": "utf-8",
+            "maxBytes": 1024
+        },
+        "criticalErrorFile": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "default",
+            "level": "CRITICAL",
+            "filename": "./logs/critical_errors.log",
+            "encoding": "utf-8",
+            "maxBytes": 1024,
+            "mode": "a"
+        },
+        "warnFile": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "default",
+            "level": "WARN",
+            "filename": "./logs/warn_errors.log",
+            "encoding": "utf-8",
+            "maxBytes": 1024,
+            "mode": "a"
+        },
+        "parsedDataFile": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "parsedEmailData",
+            "level": "DEBUG",
+            "filename": "./logs/parsed_data.log",
+            "encoding": "utf-8",
+            "mode": "w"
+        },
+        "debugFile": {
+            "class": "logging.FileHandler",
+            "formatter": "default",
+            "level": "DEBUG",
+            "filename": "./logs/debug.log",
+            "encoding": "utf-8",
+            "mode": "w"
+        }
+    },
+    "loggers": {
+        "parsedDataConsoleLogger": {
+            "level": "INFO",
+            "handlers": ["consoleParsedData"]
+        },
+        "parsedDataFileLogger": {
+            "level": "INFO",
+            "handlers": ["parsedDataFile"]
+        },
+        "rosseel": {
+            "level": "INFO",
+            "handlers": []
+        },
+        "slack": {
+            "level": "INFO",
+            "handlers": []
+        },
+        "debug": {
+            "level": "DEBUG",
+            "handlers": ["debugConsole", "debugFile"]
+        },
+        "error": {
+            "level": "WARN",
+            "handlers": ["errorFile", "criticalErrorFile", "warnFile"]
+        },
+        "tableLogger": {
+            "level": "DEBUG",
+            "handlers": ["debugConsole"]
+        }
+    },
+    "root": {
+        "handlers": ["errorFile"]
+    }
+}

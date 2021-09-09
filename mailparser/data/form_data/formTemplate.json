@@ -1,0 +1,11 @@
+{
+    "standard_keys": {
+        "Voornaam": true,
+        "Achternaam": true,
+        "Ref.": true,
+        "Source": true,
+        "Bericht": false,
+        "Tel.": false,
+        "Adres": true
+    }
+}

@@ -1,0 +1,112 @@
+[
+    {
+        "type": "pandQuestion",
+        "source": "Immo Proxio",
+        "webhookInteraction": "redacted",
+        "formFields": [
+            {
+                "keyNames": ["Contact", "Contact"],
+                "renamedKey": "Naam",
+                "valueActions": [
+                    { "action": "capitalise" },
+                    {
+                        "action": "split",
+                        "maxsplit": 2,
+                        "afterActions": [
+                            {
+                                "action": "slice",
+                                "beginIndex": 1,
+                                "endIndex": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "keyNames": ["Telefoon", "Téléphone"],
+                "renamedKey": "Tel.",
+                "valueActions": [{ "action": "phonenumiphy" }]
+            },
+            {
+                "keyNames": ["E-mail", "E-mail"],
+                "renamedKey": "E-mail",
+                "valueActions": null
+            },
+            {
+                "keyNames": ["Referentie", "Référence"],
+                "renamedKey": "Ref.",
+                "valueActions": [
+                    {
+                        "action": "regex",
+                        "pattern": "\\(([^)]+)\\)",
+                        "match_index": -1
+                    }
+                ]
+            },
+            {
+                "keyNames": ["Pand Adres", "Adresse du bien"],
+                "renamedKey": "Adres",
+                "valueActions": null
+            },
+            {
+                "keyNames": ["Bericht", "Message"],
+                "renamedKey": "Bericht",
+                "valueActions": null
+            }
+        ],
+        "path": {
+            "toTable": [["table", 11]],
+            "containerWithText": null,
+            "textIsNthChild": 1,
+            "keyTdIndex": 0,
+            "valueTdIndex": 1
+        }
+    },
+    {
+        "type": "generalQuestion",
+        "source": "Immo Proxio",
+        "webhookInteraction": "redacted",
+        "formFields": [
+            {
+                "keyNames": ["Contact", "Contact"],
+                "renamedKey": "Naam",
+                "valueActions": [
+                    { "action": "capitalise" },
+                    {
+                        "action": "split",
+                        "maxsplit": 2,
+                        "afterActions": [
+                            {
+                                "action": "slice",
+                                "beginIndex": 1,
+                                "endIndex": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "keyNames": ["Telefoon", "Téléphone"],
+                "renamedKey": "Tel.",
+                "valueActions": [{ "action": "phonenumiphy" }]
+            },
+            {
+                "keyNames": ["Email", "E-mail"],
+                "renamedKey": "E-mail",
+                "valueActions": null
+            },
+            {
+                "keyNames": ["Vraag", "Question"],
+                "renamedKey": "Vraag",
+                "valueActions": null
+            }
+        ],
+        "path": {
+            "toTable": [["table", 6]],
+            "containerWithText": null,
+            "textIsNthChild": 1,
+            "keyTdIndex": 0,
+            "valueTdIndex": 1
+        }
+    }
+]

@@ -1,0 +1,29 @@
+[
+    "INFO: this is just meant to be an info file, maybe I'll convert this to a MD file later (TODO)",
+    {
+        "action": "split",
+        "maxsplit": "number",
+        "sep": "string",
+        "afterActions": {
+            "_": "INFO: after_actions is an array of actions",
+            "slice": {
+                "begin_index": "number",
+                "end_index": "number"
+            },
+            "pop": {
+                "index": "number"
+            }
+        }
+    },
+    {
+        "action": "regex",
+        "pattern": "regexPattern",
+        "match_index": "number"
+    },
+    {
+        "action": "capitalise"
+    },
+    {
+        "action": "phonenumiphy"
+    }
+]

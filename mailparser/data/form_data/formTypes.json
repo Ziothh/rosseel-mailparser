@@ -1,0 +1,23 @@
+[
+    {
+        "type": "pandQuestion",
+        "valuesMustBeTruthy": {
+            "Voornaam": true,
+            "Achternaam": true,
+            "E-mail": true,
+            "Ref.": true,
+            "Bericht": false,
+            "Tel.": false,
+            "Adres": true
+        }
+    },
+    {
+        "type": "generalQuestion",
+        "valuesMustBeTruthy": {
+            "Voornaam": true,
+            "Achternaam": true,
+            "E-mail": true,
+            "Vraag": true
+        }
+    }
+]
