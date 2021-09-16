@@ -1,5 +1,5 @@
 # Agence Rosseel mailparser
-Deze mailparser heb ik gemaakt voor [https://www.rosseel.be](Agence Rosseel).
+Deze mailparser heb ik gemaakt voor [Agence Rosseel](https://www.rosseel.be).
 
 De parser wordt gerunned door een Cronjob. Dan zal het alle emails met leads verwerken en doorsturen naar de API van Rosseel.
 
