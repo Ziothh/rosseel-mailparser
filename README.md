@@ -1,7 +1,9 @@
 # Agence Rosseel mailparser
-Deze mailparser heb ik gemaakt voor Agence Rosseel.
+Deze mailparser heb ik gemaakt voor [https://www.rosseel.be/](Agence Rosseel).
 
-Er zit al heel wat basis functionaliteit in en ik heb de parser geschreven op een manier die makkelijk nieuwe uitbreidingen toelaat zonder dat een groot stuk code herwerkt moet worden.
+De parser wordt gerunned door een Cronjob. Dan zal het alle emails met leads verwerken en doorsturen naar de API van Rosseel.
+
+Er zit al heel wat basis functionaliteit in en het is geschreven op een manier die makkelijk nieuwe uitbreidingen toelaat zonder dat een groot stuk code herwerkt moet worden.
 
 Post Scriptum: Sommige data zoals paswoorden, enz. zijn om vanzelfsprekende redenen verwijderd.
 
