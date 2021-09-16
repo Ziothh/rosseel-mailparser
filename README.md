@@ -16,3 +16,11 @@ De mailparser zal:
  - Mogenlijkheid om excel bestanden, die meegegeven worden in mails, te verwerken
  - Webscraping voor gewenste data die niet in de mail body werd meegegeven maar wel online te zien is.
  - Script om nieuwe mail content types snel te registreren in plaats van dit manueel in json data te schrijven 
+
+
+## Gebruikte Libraries
+ - [beautifulsoup4](https://pypi.org/project/beautifulsoup4): html parsing
+ - [lxml](https://pypi.org/project/lxml): in samenwerking met beautifulsoup4
+ - [pandas](https://pypi.org/project/pandas): excel parsing (zie: toekomstige feature)
+ - [regex](https://pypi.org/project/regex)
+ - [requests](https://pypi.org/project/requests): communicatie met de Rosseel API
