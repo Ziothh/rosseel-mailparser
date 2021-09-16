@@ -22,5 +22,5 @@ De mailparser zal:
  - [beautifulsoup4](https://pypi.org/project/beautifulsoup4): html parsing
  - [lxml](https://pypi.org/project/lxml): in samenwerking met beautifulsoup4
  - [pandas](https://pypi.org/project/pandas): excel parsing (zie: toekomstige feature)
- - [regex](https://pypi.org/project/regex)
+ - [regex](https://pypi.org/project/regex): reguliere expressies
  - [requests](https://pypi.org/project/requests): communicatie met de Rosseel API
